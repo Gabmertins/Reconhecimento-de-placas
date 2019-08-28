@@ -2,46 +2,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-5 ml-auto">
-            <div class="info-area info-horizontal mt-5">
-                <div class="icon icon-warning">
-                    <i class="tim-icons icon-wifi"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ _('Marketing') }}</h3>
-                    <p class="description">
-                        {{ _('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
-                    </p>
-                </div>
-            </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-primary">
-                    <i class="tim-icons icon-triangle-right-17"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ _('Fully Coded in HTML5') }}</h3>
-                    <p class="description">
-                        {{ _('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
-                    </p>
-                </div>
-            </div>
-            <div class="info-area info-horizontal">
-                <div class="icon icon-info">
-                    <i class="tim-icons icon-trophy"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ _('Built Audience') }}</h3>
-                    <p class="description">
-                        {{ _('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div class="col-md-12 mr-auto ml-auto">
         <div class="col-md-7 mr-auto">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
-                    <h4 class="card-title">{{ _('Register') }}</h4>
+                    <h4 class="card-title">{{ _('Registro') }}</h4>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
@@ -53,7 +18,7 @@
                                     <i class="tim-icons icon-single-02"></i>
                                 </div>
                             </div>
-                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ _('Name') }}">
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ _('Nome') }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
                         <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
@@ -62,7 +27,7 @@
                                     <i class="tim-icons icon-email-85"></i>
                                 </div>
                             </div>
-                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ _('Email') }}">
+                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ _('E-mail') }}">
                             @include('alerts.feedback', ['field' => 'email'])
                         </div>
                         <div class="input-group{{ $errors->has('password') ? ' has-danger' : '' }}">
@@ -71,7 +36,7 @@
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ _('Password') }}">
+                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ _('Senha') }}">
                             @include('alerts.feedback', ['field' => 'password'])
                         </div>
                         <div class="input-group">
@@ -86,13 +51,14 @@
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox">
                                 <span class="form-check-sign"></span>
-                                {{ _('I agree to the') }}
-                                <a href="#">{{ _('terms and conditions') }}</a>.
+                                {{ _('Eu aceito os') }}
+                                <a href="#">{{ _('termos e condições') }}</a>.
                             </label>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ _('Get Started') }}</button>
+                    <div class="card-footer-right">
+                        <button  href="" class="btn btn-default mb-3 btn-round ">{{ _('Voltar') }}</button>
+                        <button type="submit" class="btn btn-default mb-3 btn-round ">{{ _('Registrar') }}</button>
                     </div>
                 </form>
             </div>

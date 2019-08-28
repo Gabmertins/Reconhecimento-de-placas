@@ -6,10 +6,15 @@
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('Welcome!') }}</h1>
+                        <h1 class="text-white">{{ __('Bem vindo!') }}</h1>
                         <p class="text-lead text-light">
-                            {{ __('Use Black Dashboard theme to create a great project.') }}
+                            {{ __('Você está prestes a conhecer a mais nova revolução na área de inteligencia arficiail by 8bit.') }}
                         </p>
+                        <div >
+                        <h6>
+                            <button href="{{ route('login') }}">{{ _('Fazer login') }}</button>
+                        </h6>
+                    </div>
                     </div>
                 </div>
             </div>
