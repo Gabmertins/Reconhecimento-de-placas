@@ -6,7 +6,7 @@
         <div class="col-md-7 mr-auto">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <h4 class="card-title">{{ _('Registro') }}</h4>
+                    <h1 class="text-center  text-dark">{{ _('Registro') }}</h1>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
@@ -56,7 +56,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="card-footer-right">
+                    <div class="card-footer text-right">
                         <button  href="" class="btn btn-default mb-3 btn-round ">{{ _('Voltar') }}</button>
                         <button type="submit" class="btn btn-default mb-3 btn-round ">{{ _('Registrar') }}</button>
                     </div>

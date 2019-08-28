@@ -6,14 +6,14 @@
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('Bem vindo!') }}</h1>
-                        <p class="text-lead text-light">
+                        <h1 class="text-white">{{ __('Bem vindo ao Capture!') }}</h1>
+                        <h4 class="text-lead text-light">
                             {{ __('Você está prestes a conhecer a mais nova revolução na área de inteligencia arficiail by 8bit.') }}
-                        </p>
+                        </h4>
                         <div >
-                        <h6>
-                            <button href="{{ route('login') }}">{{ _('Fazer login') }}</button>
-                        </h6>
+                        <div>
+                            <button class="btn btn-default btn-round btn-lg btn-block mb-3" href="{{ route('login') }}">{{ _('Fazer login') }}</button>
+                        </div>
                     </div>
                     </div>
                 </div>
