@@ -4,11 +4,10 @@
     <div class="col-lg-5 col-md-7 ml-auto mr-auto">
         <form class="form" method="post" action="{{ route('password.email') }}">
             @csrf
-
-            <div class="card card-login card-white">
+            <div class="card  card-white">
                 <div class="card-header">
-                    <img src="{{ asset('black') }}/img/card-primary.png" alt="">
-                    <h1 class="card-title">{{ _('Reset password') }}</h1>
+                <h1 class="text-default text-center mt-2"><strong>Esqueceu sua senha?</strong></h1>
+                <p class="ml-2 mr-2 text-default">Não se preocupe: preencha seu endereço de e-mail abaixo, e iremos enviar um link para redefinir.</p>
                 </div>
                 <div class="card-body">
                     @include('alerts.success')
@@ -19,12 +18,12 @@
                                 <i class="tim-icons icon-email-85"></i>
                             </div>
                         </div>
-                        <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ _('Email') }}">
+                        <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ _('E-mail') }}">
                         @include('alerts.feedback', ['field' => 'email'])
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">{{ _('Send Password Reset Link') }}</button>
+                    <button type="submit" class="btn btn-default btn-lg btn-block mb-3 btn-round">{{ _('Enviar') }}</button>
                 </div>
             </div>
         </form>

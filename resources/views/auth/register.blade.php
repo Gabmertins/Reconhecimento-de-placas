@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12 mr-auto ml-auto">
-        <div class="col-md-7 mr-auto">
-            <div class="card card-register card-white">
+        <div class="col-lg-12">
+        <div class="col-lg-7">
+            <div class="card card-white text-center">
                 <div class="card-header">
-                    <h1 class="text-center  text-dark">{{ _('Registro') }}</h1>
+                    <h1 class="text-default text-center mt-2">{{ _('Registro') }}</h1>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
@@ -21,6 +21,17 @@
                             <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ _('Nome') }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
+
+                        <div class="input-group{{ $errors->has('placa') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="tim-icons icon-car"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="placa" class="form-control{{ $errors->has('placa') ? ' is-invalid' : '' }}" placeholder="{{ _('Placa do veículo') }}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+                        
                         <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -45,7 +56,7 @@
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ _('Confirm Password') }}">
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ _('Confirmar senha') }}">
                         </div>
                         <div class="form-check text-left">
                             <label class="form-check-label">
