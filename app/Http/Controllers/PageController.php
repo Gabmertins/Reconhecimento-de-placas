@@ -49,11 +49,7 @@ class PageController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function rtl()
-    {
-        return view('pages.rtl');
-    }
-
+  
     /**
      * Display typography page
      *

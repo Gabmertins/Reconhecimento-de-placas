@@ -1,16 +1,16 @@
-@extends('layouts.app', ['class' => 'login-page', 'page' => _('Login Page'), 'contentClass' => 'login-page'])
+@extends('layouts.app', ['class' => 'login-page', 'page' => _('Login'), 'contentClass' => 'login-page'])
 
 @section('content')
-    <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+    <div class="col-lg-5 col ml-auto mr-auto">
         <form class="form" method="post" action="{{ route('login') }}">
             @csrf
 
-            <div class="card card-login card-white ">
+            <div class="card card-white ">
                 <div class="card-header ml-auto mr-auto ">
-                    <h1 class="text-dark" >{{_('Login') }}</h1>
+                <h1 class="text-default text-center mt-2">{{_('Login') }}</h1>
                 </div>
                 <div class="card-body">
-                    <p class="text-dark mb-2">Entre com <strong>admin@black.com</strong> e senha <strong>secret</strong></p>
+                    <p class="text-default mb-2">Entre com seu e-mail e senha</p>
                     <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
@@ -31,15 +31,15 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" href="" class="btn btn-default btn-round btn-lg btn-block mb-3">{{ _('Entrar') }}</button>
+                    <button type="submit" href="" class="btn btn-default btn-lg btn-block mb-3">{{ _('Entrar') }}</button>
                     <div class="pull-left">
                         <h6>
-                            <a href="{{ route('register') }}" class="link footer-link">{{ _('Criar uma conta') }}</a>
+                            <a href="{{ route('register') }}">{{ _('Criar uma conta') }}</a>
                         </h6>
                     </div>
                     <div class="pull-right">
                         <h6>
-                            <a href="{{ route('password.request') }}" class="link footer-link">{{ _('Esqueceu sua senha?') }}</a>
+                            <a href="{{ route('password.request') }}">{{ _('Esqueceu sua senha?') }}</a>
                         </h6>
                     </div>
                 </div>

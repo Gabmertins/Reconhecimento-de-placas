@@ -1,10 +1,10 @@
-@extends('layouts.app', ['class' => 'register-page', 'page' => _('Register Page'), 'contentClass' => 'register-page'])
+@extends('layouts.app', ['class' => 'register-page', 'page' => _('Registro'), 'contentClass' => 'register-page'])
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12">
-        <div class="col-lg-7">
-            <div class="card card-white text-center">
+        <div class="col-lg-12 ">
+        <div class="col-lg-7  ml-auto mr-auto">
+            <div class="card card-white">
                 <div class="card-header">
                     <h1 class="text-default text-center mt-2">{{ _('Registro') }}</h1>
                 </div>
@@ -21,17 +21,25 @@
                             <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ _('Nome') }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
-
-                        <div class="input-group{{ $errors->has('placa') ? ' has-danger' : '' }}">
+                        <div class="row">
+                        <div class="col-6 input-group{{ $errors->has('cpf') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                    <i class="tim-icons icon-car"></i>
+                                </div>
+                            </div>
+                            <input type="text" name="cpf" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" placeholder="{{ _('CPF') }}">
+                            @include('alerts.feedback', ['field' => 'cpf'])
+                        </div>
+                        
+                        <div class="col-6 input-group{{ $errors->has('placa') ? ' has-danger' : '' }}">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
                                 </div>
                             </div>
                             <input type="text" name="placa" class="form-control{{ $errors->has('placa') ? ' is-invalid' : '' }}" placeholder="{{ _('Placa do veículo') }}">
-                            @include('alerts.feedback', ['field' => 'name'])
+                            @include('alerts.feedback', ['field' => 'placa'])
                         </div>
-                        
+                        </div>
                         <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -63,13 +71,13 @@
                                 <input class="form-check-input" type="checkbox">
                                 <span class="form-check-sign"></span>
                                 {{ _('Eu aceito os') }}
-                                <a href="#">{{ _('termos e condições') }}</a>.
+                                <a href="">{{ _('termos e condições') }}</a>.
                             </label>
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button  href="" class="btn btn-default mb-3 btn-round ">{{ _('Voltar') }}</button>
-                        <button type="submit" class="btn btn-default mb-3 btn-round ">{{ _('Registrar') }}</button>
+                        <button  href="/home" class="btn btn-danger mb-3 ">{{ _('Voltar') }}</button>
+                        <button type="submit" class="btn btn-default mb-3 ">{{ _('Registrar') }}</button>
                     </div>
                 </form>
             </div>

@@ -12,8 +12,8 @@
                         </h4>
                         <div >
                         <div>
-                            <a class="btn btn-round btn-default btn-round btn-lg btn-block mb-3" href="{{ route('login') }}">{{ _('Fazer login') }}</a>
-                            <a class="btn btn-round btn-default btn-round btn-lg btn-block mb-3" href="{{ route('register') }}">{{ ('Registrar-se') }}</a>
+                            <a class="btn btn-default btn-round btn-lg btn-block mb-3" href="{{ route('login') }}">{{ _('Fazer login') }}</a>
+                            <a class="btn btn-default btn-round btn-lg btn-block mb-3" href="{{ route('register') }}">{{ ('Registrar-se') }}</a>
                          </div>
                     </div>
                     </div>

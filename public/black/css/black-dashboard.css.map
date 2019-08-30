@@ -115,7 +115,6 @@
 		"../scss/dashboard/core/custom/_fixed-plugin.scss",
 		"../scss/dashboard/core/custom/_sidebar-and-main-panel.scss",
 		"../scss/dashboard/core/custom/_misc.scss",
-		"../scss/dashboard/core/custom/_rtl.scss",
 		"../scss/dashboard/core/custom/_input-group.scss",
 		"../scss/dashboard/core/custom/vendor/_plugin-perfect-scrollbar.scss",
 		"../scss/dashboard/core/custom/vendor/_plugin-animate-bootstrap-notify.scss",

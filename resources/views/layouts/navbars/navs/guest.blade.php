@@ -20,7 +20,7 @@
               
                     <li class="nav-item ">
                         <a href="{{ route('register') }}" class="nav-link">
-                            <i class="tim-icons icon-laptop"></i> {{ _('Register') }}
+                            <i class="tim-icons icon-laptop"></i> {{ _('Registrar-se') }}
                         </a>
                     </li>
                     <li class="nav-item ">

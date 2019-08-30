@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'login-page', 'page' => _('Reset password'), 'contentClass' => 'login-page'])
+@extends('layouts.app', ['class' => 'login-page', 'page' => _('Recuperar senha'), 'contentClass' => 'login-page'])
 
 @section('content')
     <div class="col-lg-5 col-md-7 ml-auto mr-auto">
@@ -6,7 +6,7 @@
             @csrf
             <div class="card  card-white">
                 <div class="card-header">
-                <h1 class="text-default text-center mt-2"><strong>Esqueceu sua senha?</strong></h1>
+                <h1 class="text-default text-center mt-2">Esqueceu sua senha?</h1>
                 <p class="ml-2 mr-2 text-default">Não se preocupe: preencha seu endereço de e-mail abaixo, e iremos enviar um link para redefinir.</p>
                 </div>
                 <div class="card-body">
