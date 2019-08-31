@@ -30,12 +30,12 @@
                                 <div class="row">
                   <div class=" col-6 form-group{{ $errors->has('cpf') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-cpf">{{ __('CPF') }}</label>
-                                    <input type="text" name="cpf" id="input-cpf" class="form-control form-control-alternative{{ $errors->has('cpf') ? ' is-invalid' : '' }}" placeholder="{{ __('CPF') }}" value="{{ old('cpf') }}" required autofocus>
+                                    <input type="text" name="cpf" id="input-cpf" class="form-control form-control-alternative{{ $errors->has('cpf') ? ' is-invalid' : '' }}" placeholder="{{ __('CPF') }}" value="{{ old('cpf', $user->cpf) }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'cpf'])
                                 </div>
                                 <div class=" col-6 form-group{{ $errors->has('placa') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-placa">{{ __('Placa do Veículo') }}</label>
-                                    <input type="text" name="placa" id="input-placa" class="form-control form-control-alternative{{ $errors->has('placa') ? ' is-invalid' : '' }}" placeholder="{{ __('Placa do Veículo') }}" value="{{ old('placa') }}" required autofocus>
+                                    <input type="text" name="placa" id="input-placa" class="form-control form-control-alternative{{ $errors->has('placa') ? ' is-invalid' : '' }}" placeholder="{{ __('Placa do Veículo') }}" value="{{ old('placa', $user->placa) }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'placa'])
                                 </div>
 </div>
