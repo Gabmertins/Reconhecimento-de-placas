@@ -30,7 +30,7 @@
                     <div class="content">
                         @yield('content')
                     </div>
-
+                    
                     @include('layouts.footer')
                 </div>
             </div>
@@ -62,7 +62,6 @@
         {{-- <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script> --}}
         <!--  Notifications Plugin    -->
         <script src="{{ asset('black') }}/js/plugins/bootstrap-notify.js"></script>
-
         <script src="{{ asset('black') }}/js/black-dashboard.min.js?v=1.0.0"></script>
         <script src="{{ asset('black') }}/js/theme.js"></script>
 
@@ -174,5 +173,8 @@
             });
         </script>
         @stack('js')
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+        {!! $chart->script() !!}
+
     </body>
 </html>
