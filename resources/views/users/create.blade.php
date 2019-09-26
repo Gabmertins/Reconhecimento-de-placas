@@ -11,8 +11,8 @@
                                 <h3 class="mb-0">{{ __('Criar Usuário') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('user.index') }}" class="btn btn-sm btn-default">{{ __('Voltar a lista') }}</a>
-                            </div>
+                                    <a href="{{ route('user.index') }}" class="btn btn-sm btn-default">{{ __('Voltar a lista') }}</a>
+                                </div>
                         </div>
                     </div>
                     <div class="card-body">

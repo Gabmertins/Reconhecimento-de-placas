@@ -110,8 +110,7 @@
                         </div>
                     </p>
                     <div class="card-description">
-                        {{ _('Contador de quantas vezes o carro já passou') }}
-                    </div>
+                   
                 </div>
                
                 </div>

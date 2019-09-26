@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'register-page', 'page' => _('Registro'), 'contentClass' => 'register-page'])
+@extends('layouts.app', ['class' => 'register-page', 'contentClass' => 'register-page'])
 
 @section('content')
     <div class="row">
@@ -76,10 +76,10 @@
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button  href="/home" class="btn btn-danger mb-3 ">{{ _('Voltar') }}</button>
+                            <button  class="btn btn-danger mb-3" type="button" value="Voltar" onClick="JavaScript: window.history.back();">Voltar</button>
                         <button type="submit" class="btn btn-default mb-3 ">{{ _('Registrar') }}</button>
                     </div>
-                </form>
+                </form> 
             </div>
         </div>
     </div>
